@@ -1,0 +1,7 @@
+.main-header {
+    min-height: 130px;
+}
+
+.main-header>* {
+    grid-column: 2;
+}

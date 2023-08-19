@@ -1,0 +1,34 @@
+.main-layout {
+    display: grid;
+    grid-template-columns:
+        minmax(20px, 1fr) minmax(auto, 980px) minmax(20px, 1fr);
+
+    grid-auto-flow: row;
+}
+
+.main-layout>*:not(.full) {
+    grid-column: 2;
+}
+
+.main-layout>*.full {
+    grid-column: 1/-1;
+}
+
+.main-layout.main-header>* {
+    grid-row: 1;
+    place-self: center start;
+}
+
+.main-layout.main-header>*:last-child {
+    grid-column: 2/3;
+    place-self: center end;
+}
+
+.main-content .card {
+    grid-template-columns: repeat(2, minmax(440px, 1fr));
+    min-height: 19.1875rem;
+}
+
+.main-content .card img {
+    grid-row: 1/4;
+}
