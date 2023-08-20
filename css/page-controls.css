@@ -1,0 +1,33 @@
+.pages-controls {
+    border-block: 1px solid var(--clrSecondary1);
+}
+
+.pages-controls {
+    padding: 30px 55px;
+}
+
+.pages-controls a {
+    position: relative;
+    font-size: 1.125rem;
+    text-transform: uppercase;
+    font-weight: 700;
+    letter-spacing: 0.05625rem;
+    color: var(--clrSecondary-1);
+    transition: 0.2s ease-in-out;
+}
+
+.pages-controls li:first-of-type a:before {
+    position: absolute;
+    left: calc(-0.625rem + -1.125rem);
+    content: "\2190";
+}
+
+.pages-controls li:last-of-type a:after {
+    position: absolute;
+    right: calc(-0.625rem + -1.125rem);
+    content: "\2192";
+}
+
+.pages-controls a:hover {
+    color: var(--clrAccent);
+}

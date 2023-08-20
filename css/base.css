@@ -23,6 +23,7 @@ a {
 }
 
 h2,
+h4,
 p {
     margin: 0;
     padding: 0;
@@ -57,6 +58,13 @@ li {
     grid-column: 3/4;
 }
 
+.main-nav .btn.hamburger {
+    display: none;
+    border: none;
+    font-weight: 700;
+    color: white;
+    background-color: var(--clrAccent);
+}
 
 .main-nav li:first-child {
     border-left: 1px solid var(--clrPrimary-1);
@@ -79,23 +87,6 @@ li {
     transition: color, box-shadow 0.4s;
 }
 
-.card {
-    margin: 5rem 0 5rem 0;
-    column-gap: 2.5em;
-    font-size: 1rem;
-    padding-inline-end: 1.5625rem;
-}
-
-.card .title {
-    text-transform: uppercase;
-    font-size: 1.75em;
-    line-height: 1;
-    height: max-content;
-}
-
-.card :is(.read-more, p) {
-    font-size: 1em;
-}
 
 .btn {
     position: relative;
@@ -117,9 +108,12 @@ li {
     align-self: end;
 }
 
-.card .btn.read-more:hover {
+.btn:hover {
     color: var(--clrAccent);
     border-color: var(--clrAccent);
+}
+
+.card .btn.read-more:hover {
     padding-inline-end: 3em
 }
 
@@ -133,102 +127,4 @@ li {
 
 .card .btn.read-more:hover::after {
     opacity: 1;
-}
-
-.main-nav .btn.hamburger {
-    display: none;
-    border: none;
-    font-weight: 700;
-    color: white;
-    background-color: var(--clrAccent);
-}
-
-.pages-controls {
-    border-block: 1px solid var(--clrSecondary1);
-}
-
-.pages-controls {
-    padding: 30px 55px;
-}
-
-.pages-controls a {
-    position: relative;
-    font-size: 1.125rem;
-    text-transform: uppercase;
-    font-weight: 700;
-    letter-spacing: 0.05625rem;
-    color: var(--clrSecondary-1);
-    transition: 0.2s ease-in-out;
-}
-
-.pages-controls li:first-of-type a:before {
-    position: absolute;
-    left: calc(-0.625rem + -1.125rem);
-    content: "\2190";
-}
-
-.pages-controls li:last-of-type a:after {
-    position: absolute;
-    right: calc(-0.625rem + -1.125rem);
-    content: "\2192";
-}
-
-.pages-controls a:hover {
-    color: var(--clrAccent);
-}
-
-.main-footer {
-    min-height: 315px;
-    background-color: var(--clrSecondary);
-}
-
-.main-footer .branding {
-    text-align: center;
-    margin-bottom: 2.375rem;
-}
-
-.main-footer .branding .logo {
-    margin-bottom: 2rem;
-}
-
-.main-footer small {
-    font-size: 0.8125rem;
-    display: block;
-}
-
-.main-footer .social ul {
-    display: flex;
-    gap: 20px;
-}
-
-.main-footer .social li {
-    width: 40px;
-    height: 40px;
-    background-color: #e5e5e5;
-    transition: background-color 0.25s ease-out;
-}
-
-.main-footer .social li:hover {
-    background-color: var(--clrAccent);
-}
-
-.main-footer .social li:first-child:hover {
-    background-color: #516fad;
-}
-
-.main-footer .social li:nth-child(2):hover {
-    background-color: #1DA1F2;
-}
-
-
-.main-footer .social img {
-    width: auto;
-    height: auto;
-}
-
-.main-footer .social a {
-    display: grid;
-    place-items: center;
-    width: 100%;
-    height: 100%;
 }

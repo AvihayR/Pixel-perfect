@@ -1,0 +1,17 @@
+.card {
+    margin: 5rem 0 5rem 0;
+    column-gap: 2.5em;
+    font-size: 1rem;
+    padding-inline-end: 1.5625rem;
+}
+
+.card .title {
+    text-transform: uppercase;
+    font-size: 1.75em;
+    line-height: 1;
+    height: max-content;
+}
+
+.card :is(.read-more, p) {
+    font-size: 1em;
+}

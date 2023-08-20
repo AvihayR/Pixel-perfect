@@ -9,6 +9,16 @@
 </head>
 
 <body class="main-layout">
+
+    <section class="backdrop">
+        <article class="modal flex column">
+            <button class="close-btn" onclick="onToggleModal()">X</button>
+            <h4>Join us to get access to the latest stories!</h4>
+            <input type="email" placeholder="Enter email here..">
+            <button class="btn round" onclick="onToggleModal()">Join</button>
+        </article>
+    </section>
+
     <header class="main-header full main-layout">
         <nav class="main-nav flex stretch-self align-center space-between">
 
@@ -30,7 +40,7 @@
             <h2 class="title">
                 Duis aute irure dolor in henderit in voluptate.
             </h2>
-            <img src="images/001.png" alt="Train tracks image">
+            <img src="images/003.png" alt="Train tracks image">
             <p class="card-text">
                 Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commo
                 doconsequat, sunt in culpa qui officia deserunt mollit anim id est laborum.
@@ -38,7 +48,7 @@
                 <br>
                 Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur...
             </p>
-            <button class="btn round read-more">Continue Reading</button>
+            <button class="btn round read-more" onclick="onToggleModal()">Continue Reading</button>
         </section>
         <section class="card grid" aria-label="Duis aute irure dolor in henderit in voluptate.">
             <h2 class="title">
@@ -52,13 +62,13 @@
                 <br>
                 Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur...
             </p>
-            <button class="btn round read-more">Continue Reading</button>
+            <button class="btn round read-more" onclick="onToggleModal()">Continue Reading</button>
         </section>
         <section class="card grid" aria-label="Duis aute irure dolor in henderit in voluptate.">
             <h2 class="title">
                 Duis aute irure dolor in henderit in voluptate.
             </h2>
-            <img src="images/003.png" alt="Oats field image">
+            <img src="images/001.png" alt="Oats field image">
             <p class="card-text">
                 Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commo
                 doconsequat, sunt in culpa qui officia deserunt mollit anim id est laborum.
@@ -66,7 +76,7 @@
                 <br>
                 Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur...
             </p>
-            <button class="btn round read-more">Continue Reading</button>
+            <button class="btn round read-more" onclick="onToggleModal()">Continue Reading</button>
         </section>
         <section class="pages-controls">
             <ul class="flex space-between">
@@ -92,11 +102,12 @@
     <script>
         function onToggleMenu() {
             const elUl = document.querySelector('.main-nav ul')
-            const elNav = document.querySelector('.main-nav')
-
-            elNav.classList.toggle('open')
             elUl.classList.toggle('open')
+        }
 
+        function onToggleModal() {
+            const elBackdrop = document.querySelector('.backdrop')
+            elBackdrop.classList.toggle('shown')
         }
     </script>
 </body>

@@ -15,5 +15,8 @@
     --m: 860px;
     --s: 600px;
 
-    /* --card-l:  */
+    /* MODAL */
+    --modal-left: 25vw;
+    --modal-top: 25%;
+    --modal-height: 20%;
 }
