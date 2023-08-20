@@ -10,14 +10,19 @@
 
 <body class="main-layout">
     <header class="main-header full main-layout">
-        <div class="logo">Blogin<span class="logo-dot">.</span></div>
-        <nav class="main-nav">
-            <ul class="flex">
+        <nav class="main-nav flex stretch-self align-center space-between">
+
+            <div class="logo">Blogin<span class="logo-dot">.</span></div>
+            <ul class="grid auto-flow-column">
                 <li><a href="" class="flex align-center justify-center">Journal</a></li>
                 <li><a href="" class="flex align-center justify-center">About</a></li>
                 <li><a href="" class="flex align-center justify-center">Work</a></li>
                 <li><a href="" class="flex align-center justify-center">Contact</a></li>
             </ul>
+
+            <button class="btn hamburger" onclick="onToggleMenu()">
+                ≡
+            </button>
         </nav>
     </header>
     <main class="main-content">
@@ -33,7 +38,7 @@
                 <br>
                 Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur...
             </p>
-            <button class="read-more">Continue Reading</button>
+            <button class="btn round read-more">Continue Reading</button>
         </section>
         <section class="card grid" aria-label="Duis aute irure dolor in henderit in voluptate.">
             <h2 class="title">
@@ -47,7 +52,7 @@
                 <br>
                 Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur...
             </p>
-            <button class="read-more">Continue Reading</button>
+            <button class="btn round read-more">Continue Reading</button>
         </section>
         <section class="card grid" aria-label="Duis aute irure dolor in henderit in voluptate.">
             <h2 class="title">
@@ -61,7 +66,7 @@
                 <br>
                 Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur...
             </p>
-            <button class="read-more">Continue Reading</button>
+            <button class="btn round read-more">Continue Reading</button>
         </section>
         <section class="pages-controls">
             <ul class="flex space-between">
@@ -77,15 +82,23 @@
         </section>
         <section class="social flex">
             <ul>
-                <li><a href=""><img src="images/Facebook.png" alt="" srcset=""></a></li>
-                <li><a href=""><img src="images/Twitter.png" alt="" srcset=""></a></li>
-                <li><a href=""><img src="images/Be.png" alt="" srcset=""></a>
-                </li>
-                <li><a href=""><img src="images/Basketball.png" alt="" srcset=""></a></li>
+                <li><a href="" class="fa facebook"></a></li>
+                <li><a href="" class="fa twitter"></a></li>
+                <li><a href="" class="fa instagram"></a></li>
+                <li><a href="" class="fa linkedin"></a></li>
             </ul>
         </section>
     </footer>
+    <script>
+        function onToggleMenu() {
+            const elUl = document.querySelector('.main-nav ul')
+            const elNav = document.querySelector('.main-nav')
 
+            elNav.classList.toggle('open')
+            elUl.classList.toggle('open')
+
+        }
+    </script>
 </body>
 
 </html>

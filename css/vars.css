@@ -1,8 +1,19 @@
 :root {
+    /* PALLETTE */
     --clrPrimary-1: #1e1e1e;
     --clrPrimary: #292929;
     --clrSecondary-1: #818181;
     --clrSecondary: #f8f8f8;
     --clrSecondary1: #c2c2c2;
     --clrAccent: #58c93a;
+
+    /* HEADER */
+    --header-height: 130px;
+
+    /* MQ */
+    --l: 980px;
+    --m: 860px;
+    --s: 600px;
+
+    /* --card-l:  */
 }

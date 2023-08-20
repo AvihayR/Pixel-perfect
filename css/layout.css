@@ -21,7 +21,6 @@
 
 .main-layout.main-header>*:last-child {
     grid-column: 2/3;
-    place-self: center end;
 }
 
 .main-content .card {

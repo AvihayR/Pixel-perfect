@@ -1,3 +1,4 @@
+/* FLEX Helpers*/
 .flex {
     display: flex;
 }
@@ -18,6 +19,11 @@
     flex-direction: column;
 }
 
+.flex.stretch-self {
+    justify-self: stretch;
+}
+
+/* GRID Helpers*/
 .grid {
     display: grid;
 }

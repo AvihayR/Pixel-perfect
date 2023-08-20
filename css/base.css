@@ -54,20 +54,17 @@ li {
 }
 
 .main-header .main-nav {
-    height: 100%;
     grid-column: 3/4;
 }
 
-.main-nav ul {
-    height: 100%;
-}
 
 .main-nav li:first-child {
     border-left: 1px solid var(--clrPrimary-1);
 }
 
 .main-nav li {
-    width: 130px;
+    width: var(--header-height);
+    min-height: var(--header-height);
     border-right: 1px solid var(--clrPrimary-1);
 }
 
@@ -84,7 +81,7 @@ li {
 
 .card {
     margin: 5rem 0 5rem 0;
-    column-gap: 2.5rem;
+    column-gap: 2.5em;
     font-size: 1rem;
     padding-inline-end: 1.5625rem;
 }
@@ -100,27 +97,33 @@ li {
     font-size: 1em;
 }
 
-.card .read-more {
+.btn {
     position: relative;
     justify-self: start;
-    align-self: end;
     letter-spacing: 0.50px;
     line-height: 1;
-    padding: 0.75em 1.5rem;
+    padding: 0.75em 1.5em;
     color: var(--clrSecondary1);
     border: 2px solid var(--clrSecondary1);
-    border-radius: 2em;
     cursor: pointer;
     transition: padding 0.3s ease-in-out, color 0.3s ease-in-out, border-color 0.3s ease-in-out;
 }
 
-.card .read-more:hover {
-    color: var(--clrAccent);
-    border-color: var(--clrAccent);
-    padding-inline-end: 3rem
+.btn.round {
+    border-radius: 2em;
 }
 
-.card .read-more::after {
+.btn.read-more {
+    align-self: end;
+}
+
+.card .btn.read-more:hover {
+    color: var(--clrAccent);
+    border-color: var(--clrAccent);
+    padding-inline-end: 3em
+}
+
+.card .btn.read-more::after {
     content: "\2192";
     position: absolute;
     right: 1.5em;
@@ -128,8 +131,16 @@ li {
     transition: opacity 0.3s;
 }
 
-.card .read-more:hover::after {
+.card .btn.read-more:hover::after {
     opacity: 1;
+}
+
+.main-nav .btn.hamburger {
+    display: none;
+    border: none;
+    font-weight: 700;
+    color: white;
+    background-color: var(--clrAccent);
 }
 
 .pages-controls {
